@@ -62,13 +62,21 @@ die geplante öffentliche Nutzung: Der interne Wallet-Adapter ist keine Zusage e
 offiziellen API-Zugangs. Chrome-Freigabe bedeutet keine eToro-Unterstützung.
 [Korrekte Produktangaben](https://developer.chrome.com/docs/webstore/program-policies/listing-requirements).
 
-## 4. Optional: Open-Source-Repository vorbereiten
+## 4. Quellcode-Repository und Lizenz
+
+Das Projekt liegt unter [yadimon/etoro-wallet-search](https://github.com/yadimon/etoro-wallet-search).
+Der Herausgeber hat **PolyForm Noncommercial 1.0.0** gewählt: Source available,
+keine OSI-Open-Source-Lizenz. Die in der Lizenz erlaubten Zwecke sind freigegeben;
+andere kommerzielle Nutzungen brauchen eine gesonderte Vereinbarung. Details:
+[COMMERCIAL.md](../../COMMERCIAL.md), [LICENSE](../../LICENSE), [NOTICE](../../NOTICE).
+
+Für einen neuen eigenen Fork oder eine separate Veröffentlichung:
 
 1. `npm run package:wallet:source` ausführen und das Source-ZIP in einen **neuen,
    leeren Ordner** entpacken. Es hat ein eigenes minimales Paket/Lock ohne MCP.
-2. Eine Lizenz wählen und deren vollständigen Text samt tatsächlichem
-   Rechteinhaber hinzufügen. MIT oder Apache-2.0 sind mögliche Optionen. Sichtbarer
-   Quellcode allein ersetzt keine Open-Source-Lizenz. Hier wurde keine gewählt.
+2. Die bestehende Lizenz und die erforderlichen Urheberhinweise beibehalten.
+   Ein Fork darf nicht ohne entsprechende Rechte unter MIT oder Apache-2.0
+   umgelabelt werden. Sichtbarer Quellcode allein bedeutet nicht freie kommerzielle Nutzung.
 3. Eigene Kontakt-/Repository-Links in README, SECURITY und Datenschutzerklärung ergänzen.
 4. Erst ein privates Repository erstellen, nur diese geprüften Dateien übernehmen
    und vor dem ersten Push die komplette Dateiliste prüfen.
@@ -82,10 +90,14 @@ HAR-Dateien, Konto-Screenshots, `test-results`, `.codex`, `node_modules`, MCP-Ko
 
 ## 5. Datenschutzerklärung fertigstellen und hosten
 
-[PRIVACY.md](PRIVACY.md) beschreibt die tatsächlichen Datenflüsse als Entwurf.
-Ersetze Herausgeber, Kontakt, Datum und Produktnamen. Hoste die fertige Erklärung
-unter einer öffentlichen dauerhaften HTTPS-URL, etwa auf der Projektwebsite.
-Teste sie ohne Anmeldung. Eine lokale Hilfe-Datei ersetzt diese URL nicht.
+[PRIVACY.md](PRIVACY.md) beschreibt die Datenflüsse dieses Projekts.
+Die öffentliche URL ist
+[yadimon.github.io/etoro-wallet-search/privacy.html](https://yadimon.github.io/etoro-wallet-search/privacy.html).
+Projektseite und Support sind ebenfalls dort erreichbar. Herausgeber und Kontakt
+stehen in `project-site.json`; `node scripts/build-project-site.mjs` erzeugt die
+Seiten unter `docs/`. Bei einem Fork oder geänderten Datenflüssen müssen Angaben
+und Store-Formular angepasst werden. Teste die URL ohne Anmeldung. Eine lokale
+Hilfe-Datei ersetzt diese URL nicht.
 
 Erkläre Finanz-/Transaktionsdaten, Kontomerkmale für den Cache-Schlüssel, lokale
 Speicherung, Nachprüfung/Löschen und eToro-/Exportabrufe. Keine zusätzliche

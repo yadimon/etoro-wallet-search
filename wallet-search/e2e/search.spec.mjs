@@ -207,6 +207,13 @@ test('chart hover information is also available on keyboard focus and can be dis
   await search(page);
   const app = ui(page);
   await app.locator('.statistics-summary').click();
+  // Opening Statistics can replace the chart after an incremental data read.
+  // Test the settled keyboard path without pointer events caused by its motion.
+  await waitForStartup(page);
+  await expect
+    .poll(() => app.locator('.statistics-content').evaluate((node) => node.getAnimations().length))
+    .toBe(0);
+  await page.mouse.move(0, 0);
   const month = app.locator('g[data-month="2026-10"]');
   await month.focus();
   await expect(app.locator('.chart-tooltip')).toHaveAttribute('visibility', 'visible');
