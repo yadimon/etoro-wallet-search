@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "eToro Wallet Search",
+  "version": "0.6.0",
+  "description": "Search eToro Wallet transactions and explore monthly statistics with a local history cache.",
+  "minimum_chrome_version": "111",
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://www.etoro.com/*",
+    "https://prodfileexportwe.blob.core.windows.net/*"
+  ],
+  "optional_host_permissions": ["https://*.blob.core.windows.net/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none';"
+  },
+  "background": { "service_worker": "export-worker.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.etoro.com/*"],
+      "js": ["export-relay.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://www.etoro.com/*"],
+      "js": ["wallet-search.js"],
+      "run_at": "document_idle",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "eToro Wallet Search",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

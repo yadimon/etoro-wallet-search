@@ -1,0 +1,16 @@
+{
+  "name": "eToro Wallet Search",
+  "version": "0.6.0",
+  "repository": "https://github.com/yadimon/etoro-wallet-search",
+  "site": "https://yadimon.github.io/etoro-wallet-search/",
+  "publisher": "Dmitry Gorelenkov",
+  "handle": "yadimon",
+  "email": "chrome.ext.dev.contact@gorelenkov.dev",
+  "deliveryAddress": [
+    "Krola Consulting GmbH",
+    "Nördliche Münchner Str. 47",
+    "82031 Grünwald",
+    "Germany"
+  ],
+  "effective": "2026-10-25"
+}

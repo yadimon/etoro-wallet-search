@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data.
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not attach real Wallet exports, account screenshots, names, IBANs, credentials or signed URLs. Email security/privacy issues to chrome.ext.dev.contact@gorelenkov.dev.'
+  - type: input
+    id: version
+    attributes:
+      label: Extension version and Chrome version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use fictional merchants and amounts.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

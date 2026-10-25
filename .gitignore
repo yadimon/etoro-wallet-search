@@ -1,0 +1,17 @@
+node_modules/
+prod.env
+test-results/
+playwright-report/
+.codex/
+dist/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.csv
+*.tsv
+*.har
+*.log
+*.webm
+*.crx

@@ -1,0 +1,135 @@
+:root {
+  font:
+    13px/1.5 system-ui,
+    sans-serif;
+  color: #242b34;
+  color-scheme: light;
+  background: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+body {
+  width: 330px;
+  margin: 0;
+  padding: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+#version {
+  font-size: 11px;
+  color: #929ba5;
+}
+.badge {
+  margin-left: auto;
+  color: #718174;
+  font-size: 11px;
+  background: #edf8ef;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+#status {
+  margin: 20px 0 14px;
+  min-height: 40px;
+  font-size: 13px;
+}
+#status.error {
+  color: #bc3444;
+}
+dl {
+  background: #f7f9fa;
+  border: 1px solid #e9edf0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  margin: 0 0 14px;
+}
+dl div {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+dt {
+  color: #89939e;
+}
+dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #dce3e9;
+  background: #fff;
+  border-radius: 7px;
+  padding: 8px 11px;
+}
+.primary {
+  color: #159b4f;
+  border-color: #73c995;
+}
+button:hover {
+  background: #f4faf6;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #1abb66;
+  outline-offset: 3px;
+}
+.muted {
+  font-size: 11px;
+  color: #939ca7;
+  margin-top: 15px;
+}
+footer {
+  border-top: 1px solid #edf0f3;
+  margin-top: 16px;
+  padding-top: 10px;
+}
+a {
+  color: #188f4e;
+  text-decoration: none;
+  font-size: 12px;
+}
+a:hover {
+  text-decoration: underline;
+}
+#permission {
+  border: 1px solid #dfe9e2;
+  border-radius: 7px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+#permission .muted {
+  margin-top: 0;
+}
+#permission-origin {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  margin: 7px 0 10px;
+}

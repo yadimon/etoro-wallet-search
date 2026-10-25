@@ -1,0 +1,24 @@
+{
+  "name": "wallet-search-for-etoro",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Search eToro Wallet transactions and explore monthly statistics with a local history cache.",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:wallet": "node scripts/build-wallet-search.mjs",
+    "package:wallet:source": "node scripts/package-wallet-source.mjs",
+    "test:wallet": "node --test wallet-search/*.test.mjs scripts/wallet-artifacts.test.mjs",
+    "test:wallet:e2e": "playwright test",
+    "test:wallet:all": "npm run build:wallet && npm run test:wallet && npm run test:wallet:e2e",
+    "format:wallet": "prettier --write wallet-search scripts/*.mjs playwright.config.mjs package.json README.md SECURITY.md CONTRIBUTING.md .prettierrc.json",
+    "check:wallet:format": "prettier --check wallet-search scripts/*.mjs playwright.config.mjs package.json README.md SECURITY.md CONTRIBUTING.md .prettierrc.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "prettier": "3.9.10"
+  }
+}
