@@ -9,7 +9,7 @@ Publisher and postal information are available in the
 This unofficial extension searches and displays your eToro Wallet history and
 monthly statistics. It is not affiliated with eToro.
 
-### Information processed
+## Information processed
 
 The extension reads transaction IDs, merchant/counterparty descriptions,
 dates/times, amounts, currencies, original amounts, types and statuses from your
@@ -19,7 +19,7 @@ path, derive a hashed local cache identity. Raw identity is not stored as a cach
 key. Currency, time zone and date coverage are retained. Hashing does not
 anonymize or encrypt the financial records.
 
-### Use and network access
+## Use and network access
 
 Data is used only for Wallet search, display, monthly statistics and incremental
 local caching. Existing authenticated eToro requests retrieve history; native
@@ -51,7 +51,7 @@ Refresh rechecks the selected date range. Disabling affects the current page unt
 reload, retains its cache and cancels current work. After clearing a cache, a later
 page opening can retrieve history again through the normal automatic read.
 
-### Storage, retention and deletion
+## Storage, retention and deletion
 
 The extension uses local IndexedDB; Tampermonkey uses local userscript storage.
 There is no extension sync or additional application-level encryption. Loaded
@@ -61,7 +61,7 @@ Clear local cache removes the current account/currency/time-zone snapshot and
 in-memory records. Other scopes must be cleared separately. Removing the panel
 preserves its cache. These controls do not delete eToro history.
 
-### Integration and security
+## Integration and security
 
 The UI/native client run in the eToro page context. Other scripts on that origin
 can observe rendered results and bridge messages. There is no confidentiality
@@ -69,14 +69,14 @@ guarantee against a compromised eToro page or local browser profile. Hosts,
 requests, payloads and sizes are validated; imported text is not executed, and
 extension code is packaged locally.
 
-### Support and changes
+## Support and changes
 
 Contact chrome.ext.dev.contact@gorelenkov.dev for privacy questions. Do not post real exports, account details
 or screenshots in public issues. Before requesting private support material, the
 publisher must explain its actual support-data handling and retention separately.
 Material data-practice changes require updated notices and applicable consent.
 
-### Purpose limitation
+## Purpose limitation
 
 Financial/payment information, identifying account/profile information, website
 content and the limited network/download-click observation described above are
@@ -86,7 +86,7 @@ purposes. The publisher does not receive the transaction dataset or allow people
 to read it through a developer service. This usage is limited to the disclosed
 user-facing purpose, consistent with the Chrome Web Store User Data Policy.
 
-### Project website and hosting
+## Project website and hosting
 
 The project website is hosted on GitHub Pages. It contains no developer analytics,
 advertising, contact form, external fonts or executable scripts and sets no
@@ -97,7 +97,7 @@ Visiting the website does not give the publisher access to Wallet records.
 Following links to eToro, GitHub or the Chrome Web Store involves those services
 under their own privacy practices.
 
-### Contact correspondence
+## Contact correspondence
 
 If you email the publisher, the address and content you send are used to answer
 and handle your request. Use synthetic examples; no real transaction exports are
@@ -108,7 +108,7 @@ account data. Privacy and deletion requests can be sent to the contact above.
 The publisher cannot remotely view or erase an extension cache on your device;
 use the local deletion controls described above.
 
-### Privacy requests and legal bases
+## Privacy requests and legal bases
 
 Where the GDPR applies, contact correspondence is processed to respond to requests
 and maintain support under Article 6(1)(f), or to take requested steps concerning

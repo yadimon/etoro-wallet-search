@@ -49,6 +49,9 @@ try {
       const result = await page.evaluate(() => ({
         title: document.title,
         heading: document.querySelector('h1')?.textContent,
+        headingLevels: [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map((node) =>
+          Number(node.tagName.slice(1)),
+        ),
         overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
         scriptCount: document.scripts.length,
         brokenImages: [...document.images].filter(
@@ -60,6 +63,12 @@ try {
       }));
       if (result.overflow || result.scriptCount || result.brokenImages || !result.heading)
         throw new Error(`Layout failure ${width}/${name}: ${JSON.stringify(result)}`);
+      if (
+        result.headingLevels.some(
+          (level, index) => index > 0 && level > result.headingLevels[index - 1] + 1,
+        )
+      )
+        throw new Error(`Skipped heading level: ${name}`);
       for (const href of result.localLinks) {
         const url = new URL(href, `https://project.invalid/${name}`);
         const target = url.pathname.endsWith('/') ? `${url.pathname}index.html` : url.pathname;
